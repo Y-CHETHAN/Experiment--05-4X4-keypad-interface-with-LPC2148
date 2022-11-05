@@ -138,9 +138,152 @@ Figure -12 Hex file for simulation
 
 ## Kiel - Program:
 ```c
+#include <lpc21xx.h> 
+#define RS (1<<0)
+#define RW (1<<1)
+#define E (1<<2)
 
+void LCD_command(unsigned char command);
+void  delay_ms(unsigned char time);
+void LCD_data(unsigned char data);
+void LCD_init() ;
+
+
+int main(void)
+{
+ //PINSEL1 = 0x00000000;
+ //PINSEL2 = 0X00000000;
+ IODIR1= 0x00780000;
+ IODIR0= 0x00FF0007;
+ LCD_init();
+ LCD_command(0x01); 
+ while(1)
+   {
+      IOCLR1|=(1<<19);
+      IOSET1|=(1<<20)|(1<<21)|(1<<22);
+      if(!(IOPIN1&(1<<16)))
+       {
+        while(!(IOPIN1&(1<<16)));
+        LCD_data('1');                          
+       }
+      if(!(IOPIN1&(1<<17)))
+       {
+         while(!(IOPIN1&(1<<17)));
+          LCD_data('2'); 
+       }
+      if(!(IOPIN1&(1<<18)))
+       {
+         while(!(IOPIN1&(1<<18)));
+          LCD_data('3'); 
+       }
+      IOCLR1|=(1<<20);
+      IOSET1|=(1<<21)|(1<<22)|(1<<19);
+      if(!(IOPIN1&(1<<16)))
+{
+        while(!(IOPIN1&(1<<16)));
+         LCD_data('4'); 
+      }
+      if(!(IOPIN1&(1<<17)))
+{
+        while(!(IOPIN1&(1<<17)));
+         LCD_data('5'); 
+     }
+      if(!(IOPIN1&(1<<18)))
+{
+        while(!(IOPIN1&(1<<18)));
+         LCD_data('6'); 
+     }
+      IOCLR1|=(1<<21);
+      IOSET1|=(1<<22)|(1<<20)|(1<<19);
+      if(!(IOPIN1&(1<<16)))
+{
+        while(!(IOPIN1&(1<<16)));
+         LCD_data('7'); 
+     }
+      if(!(IOPIN1&(1<<17)))
+{
+       while(!(IOPIN1&(1<<17)));
+        LCD_data('8'); 
+    }
+      if(!(IOPIN1&(1<<18)))
+{
+        while(!(IOPIN1&(1<<18)));
+         LCD_data('9'); 
+}
+      IOCLR1|=(1<<22);
+      IOSET1|=(1<<19)|(1<<20)|(1<<21);
+      if(!(IOPIN1&(1<<16)))
+{
+        while(!(IOPIN1&(1<<16)));
+         LCD_data('*'); 
+}
+      if(!(IOPIN1&(1<<17)))
+{
+        while(!(IOPIN1&(1<<17)));
+         LCD_data('0'); 
+}
+      if(!(IOPIN1&(1<<18)))
+{
+        while(!(IOPIN1&(1<<18)));
+         LCD_data('#'); 
+} 
+   }
+}
+
+
+void  delay_ms(unsigned char time)    
+{  
+ unsigned int  i, j;
+ for (j=0; j<time; j++)
+ {
+  for(i=0; i<8002; i++)
+  {
+  }
+}
+}
+
+void LCD_command(unsigned char command)
+{
+ IOCLR0 = 0xFF<<16;
+ IOCLR0=RS;
+ IOCLR0=RW;
+ IOSET0=command<<16;
+ IOSET0=E; 
+ delay_ms(10);
+ IOCLR0=E;
+}
+
+void LCD_data(unsigned char data)
+{
+ IOCLR0 = 0xFF<<16;
+ IOSET0=RS;
+ IOCLR0=RW;
+ IOSET0= data<<16;
+ IOSET0=E;
+ delay_ms(10);
+ IOCLR0=E;
+ }
+
+void LCD_init()
+{
+ LCD_command(0x38);
+ delay_ms(10);
+ LCD_command(0x0c);
+ delay_ms(10);
+    LCD_command(0x0e);
+    delay_ms(10);
+ LCD_command(0x01);
+ delay_ms(10);
+ LCD_command(0x80); 
+  delay_ms(10);
+ 
+}
 ```
 ## Output:
+<img width="1515" alt="Experiment 5" src="https://user-images.githubusercontent.com/75234991/200134993-04d5848d-ea08-460d-bbd5-4d8cf8f050ba.png">
+
+### Circuit Diagram:
+<img width="1515" alt="Experiment 5" src="https://user-images.githubusercontent.com/75234991/200134954-a4bc2765-101a-42dc-bd60-17f439c12922.png">
 
 ## Result:
 Thus, Interfacing a 4x4 keypad with ARM microcontroller is executed successfully and displayed the inputs.
