@@ -120,9 +120,9 @@ Step 8: After making necessary connections click on debug.
 
 Step 9: The selected components will appear in the devices list. Select the component and place it in the design sheet by left-click., post which select all the associated components as shown in the circuit diagram below. Example shows selection of push button. Select the components accordingly.
 
-![image](https://user-images.githubusercontent.com/36288975/195773760-d08127c0-b006-4c65-aa75-4ea498597162.png)
+![image](https://user-images.githubusercontent.com/36288975/198945047-9ef54f44-c4df-46f1-970a-f168330a7048.png)
 
-Figure -10 Circuit diagram of 16x2 LCD interface with LPC2148/38
+Figure -10 Circuit diagram of 4X4 keypad and 16x2 LCD interface with LPC2148/38
 
 ![image](https://user-images.githubusercontent.com/36288975/193398065-c12b4984-db8e-40cc-890d-221db1c35b0d.png)
 
