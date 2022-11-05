@@ -57,7 +57,7 @@ With that current flow a positive voltage of +5V appears at R3 pin. Since all RO
 
 From previous step, we have known the COLUMN number of key pressed and now we know ROW number. With that we can match the key being pressed. We can take the key INPUT provided by this way for 4X4.
 
-<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
 
 ## Procedure:
 For creation of project on Kiel μ vision 5 Development environment (LPC21 XX/48/38)
