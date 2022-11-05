@@ -278,10 +278,10 @@ void LCD_init()
 }
 ```
 ## Output:
-<img width="1515" alt="Experiment 5" src="https://user-images.githubusercontent.com/75234991/200134993-04d5848d-ea08-460d-bbd5-4d8cf8f050ba.png">
+<img width="1515" alt="Experiment 5" src="https://user-images.githubusercontent.com/75234991/200135374-632bda4d-55ba-4189-899b-d07a9ac732b7.png">
 
 ### Circuit Diagram:
-<img width="1515" alt="Experiment 5" src="https://user-images.githubusercontent.com/75234991/200134954-a4bc2765-101a-42dc-bd60-17f439c12922.png">
+<img width="1515" alt="Experiment 5" src="https://user-images.githubusercontent.com/75234991/200135407-8d1f0a07-602d-49d4-8ac8-db1fa0b410c2.png">
 
 ## Result:
 Thus, Interfacing a 4x4 keypad with ARM microcontroller is executed successfully and displayed the inputs.
