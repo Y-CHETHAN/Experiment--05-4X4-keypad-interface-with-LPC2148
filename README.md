@@ -287,7 +287,7 @@ void LCD_init()
 ## Output:
 <img width="1515" alt="Experiment 5" src="https://user-images.githubusercontent.com/75234991/200135374-632bda4d-55ba-4189-899b-d07a9ac732b7.png">
 
-<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 ### Circuit Diagram:
 <img width="1515" alt="Experiment 5" src="https://user-images.githubusercontent.com/75234991/200135407-8d1f0a07-602d-49d4-8ac8-db1fa0b410c2.png">
 
