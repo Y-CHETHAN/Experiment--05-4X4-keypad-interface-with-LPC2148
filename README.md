@@ -57,8 +57,6 @@ With that current flow a positive voltage of +5V appears at R3 pin. Since all RO
 
 From previous step, we have known the COLUMN number of key pressed and now we know ROW number. With that we can match the key being pressed. We can take the key INPUT provided by this way for 4X4.
 
-<br><br><br><br><br><br><br><br><br><br><br><br>
-
 ## Procedure:
 For creation of project on Kiel μ vision 5 Development environment (LPC21 XX/48/38)
 1.	Click on the menu Project — New µVision Project creates a new project. Select an empty folder and enter the project name, for example Project1. It is good practice to use a separate folder for each project.
@@ -135,8 +133,6 @@ Step 10: Select the hex file from the Kiel program folder and import the program
 ![image](https://user-images.githubusercontent.com/36288975/193398071-76df0a57-7e76-4868-9769-c63d220482b8.png)
 
 Figure -12 Hex file for simulation
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 ## Kiel - Program:
 ```c
@@ -282,12 +278,9 @@ void LCD_init()
 }
 ```
 
-<br><br>
-
 ## Output:
 <img width="1515" alt="Experiment 5" src="https://user-images.githubusercontent.com/75234991/200135374-632bda4d-55ba-4189-899b-d07a9ac732b7.png">
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 ### Circuit Diagram:
 <img width="1515" alt="Experiment 5" src="https://user-images.githubusercontent.com/75234991/200135407-8d1f0a07-602d-49d4-8ac8-db1fa0b410c2.png">
 
